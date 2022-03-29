@@ -29,11 +29,6 @@ public class Escuderia {
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "Escuderia_id")
 	private List<Ingeniero> ingenieros;
-	
-	//@OneToOne(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-	@OneToOne
-    @JoinColumn(name = "id")
-	private Ingeniero jefe_escuderia;
 
 	private String foto;
 	
@@ -49,16 +44,13 @@ public class Escuderia {
 		pilotos = new ArrayList<Piloto>();
 	}
 	
-	public Escuderia(String nombre_escuderia,  int mundiales_de_constructores, Ingeniero jefe_escuderia, String foto)
+	public Escuderia(String nombre_escuderia,  int mundiales_de_constructores, String foto)
 	{
 		this.nombre_escuderia = nombre_escuderia;
 		this.mundiales_de_constructores = mundiales_de_constructores;
-		this.jefe_escuderia = jefe_escuderia;
 		this.foto = foto;
 		
 		ingenieros = new ArrayList<Ingeniero>();
-		
-		ingenieros.add(jefe_escuderia);
 		
 		pilotos = new ArrayList<Piloto>();
 	}
@@ -71,15 +63,6 @@ public class Escuderia {
 		pilotos = new ArrayList<Piloto>();
 	}
 	
-	public void setJefe_escuderia(Ingeniero jefe)
-	{
-		if(!ingenieros.contains(jefe))
-		{
-			ingenieros.add(jefe);
-		}
-		
-		this.jefe_escuderia= jefe;
-	}
 
 	public void addIngeniero(Ingeniero i)
 	{

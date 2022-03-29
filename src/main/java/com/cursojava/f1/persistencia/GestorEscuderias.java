@@ -87,7 +87,7 @@ public class GestorEscuderias implements IGestorDBClase<Escuderia>{
         i = session.get(Ingeniero.class, "i_alp_os");
         listaIngenierosAlpine.add(i);
 
-        Escuderia alpine = new Escuderia("e_alp", "Alpine", 0, listaPilotosAlpine, listaIngenierosAlpine, i, "alpine.jpeg");
+        Escuderia alpine = new Escuderia("e_alp", "Alpine", 0, listaPilotosAlpine, listaIngenierosAlpine, "alpine.jpeg");
         session.save(alpine);
 
         //*************** */
@@ -109,7 +109,7 @@ public class GestorEscuderias implements IGestorDBClase<Escuderia>{
         i = session.get(Ingeniero.class, "i_am_tm");
         listaIngenierosAston.add(i);
 
-        Escuderia aston = new Escuderia("e_ast", "Aston Martin", 0, listaPilotosAston, listaIngenierosAston, i, "astonMartin.png");
+        Escuderia aston = new Escuderia("e_ast", "Aston Martin", 0, listaPilotosAston, listaIngenierosAston, "astonMartin.png");
         session.save(aston);
 
 
