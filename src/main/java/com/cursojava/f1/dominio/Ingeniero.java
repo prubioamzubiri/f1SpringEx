@@ -19,7 +19,7 @@ public class Ingeniero {
 	@Column(name="nombre")
 	private String nombre;
 	
-	@Column(name="ano_nacimiento")
-	private int ano_nacimiento;
+	@Column(name="anio_nacimiento")
+	private int anio_nacimiento;
 
 }

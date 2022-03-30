@@ -16,7 +16,7 @@ import lombok.Data;
 public class Temporada {
 	
 	@Id
-	private int ano;
+	private int anio;
 
 	@ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(
@@ -30,9 +30,9 @@ public class Temporada {
     @JoinColumn(name = "Temporada_id")
 	private List<Carrera> carreras;
 	
-	public Temporada(int ano)
+	public Temporada(int anio)
 	{
-		this.ano = ano;
+		this.anio = anio;
 		
 		escuderias = new ArrayList<Escuderia>();
 		

@@ -28,7 +28,7 @@ public class Carrera {
 	
 	@ElementCollection
     @CollectionTable(name = "posicion_en_carrera", 
-      joinColumns = {@JoinColumn(name = "posicion_id", referencedColumnName = "id")})
+      joinColumns = {@JoinColumn(name = "carrera_id", referencedColumnName = "id")})
     @MapKeyColumn(name = "posición")
     @Column(name = "piloto")
 	private Map<Integer, Piloto> pilotos_por_posicion;
