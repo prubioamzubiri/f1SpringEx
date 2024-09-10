@@ -3,31 +3,21 @@ package com.cursojava.f1.dominio;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.*;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-@Entity
-@Table(name="Escuderia")
 public class Escuderia {
-	
-	@Id
 	private String id;
 
 
 	private String nombre_escuderia;
 
 	private int mundiales_de_constructores;
-	
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "Escuderia_id")
+
 	private List<Piloto> pilotos;
-	
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "Escuderia_id")
+
 	private List<Ingeniero> ingenieros;
 
 	private String foto;
