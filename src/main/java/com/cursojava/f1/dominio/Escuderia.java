@@ -9,8 +9,8 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Escuderia {
+	
 	private String id;
-
 
 	private String nombre_escuderia;
 

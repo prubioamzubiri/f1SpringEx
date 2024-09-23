@@ -11,6 +11,8 @@ public class Ingeniero {
 	
 	private String id;
 
+	private String dni;
+
 	private String nombre;
 
 	private int anio_nacimiento;

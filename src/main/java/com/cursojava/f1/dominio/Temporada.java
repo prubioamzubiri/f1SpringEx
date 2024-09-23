@@ -13,6 +13,8 @@ import lombok.Data;
 @AllArgsConstructor
 
 public class Temporada {
+
+	private String id;
 	
 	private int anio;
 
